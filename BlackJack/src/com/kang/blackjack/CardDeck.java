@@ -33,4 +33,16 @@ public class CardDeck {
 			System.out.println(c);
 		}
 	}
+	
+	public Card pick() {
+		Card c = null;
+		for(int i = 0; i < cards.length; i++) {
+			if(cards[i] != null) {
+				c = cards[i];
+				cards[i] = null;
+				break;
+			}
+		}
+		return c;
+	}
 }
